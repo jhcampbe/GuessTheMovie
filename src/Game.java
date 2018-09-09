@@ -2,12 +2,11 @@ import java.io.*;
 import java.util.*;
 
 public class Game {
-    private String[] movies;
+    private String[] movies = new String[500]; //Our game can take text files with up to 500 movies;
+    private boolean hasWon = false;
     private Scanner scanner;
-    private boolean hasWon;
 
     public Game(){
-        movies = new String[500]; //Our game can take text files with up to 500 movies
         System.out.print("Please write the path to your movies file: ");
         scanner = new Scanner(System.in);
         File file = new File(scanner.nextLine());
@@ -16,18 +15,15 @@ public class Game {
         } catch (FileNotFoundException exception){
             System.out.println("File not found");
         }
-        hasWon = false;
     }
 
     public Game(String moviesFile) {
-        movies = new String[500]; //Our game can take text files with up to 500 movies
         File file = new File(moviesFile);
         try {
             scanner = new Scanner(file);
         } catch (FileNotFoundException exception){
             System.out.println("File not found");
         }
-        hasWon = false;
     }
 
     public String pickMovie(){
