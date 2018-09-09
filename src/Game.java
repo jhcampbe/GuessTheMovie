@@ -43,7 +43,6 @@ public class Game {
         int guesses = 0;
         char[] movieGuess = new char[randomMovie.length()];
         Scanner userGuess = new Scanner(System.in);
-        boolean goodGuess = false;
         StringBuilder wrongLetters = new StringBuilder();
 
         for (int i = 0; i < randomMovie.length(); i++){
@@ -78,6 +77,7 @@ public class Game {
                 continue;
             }
 
+            boolean goodGuess = false;
             for (int i = 0; i < randomMovie.length(); i++) {
                 if (letter == randomMovie.charAt(i)) {
                     movieGuess[i] = movie.charAt(i);
@@ -95,7 +95,6 @@ public class Game {
                 wrongLetters.append(" ");
             }
             alreadyGuessed.add(letter);
-            goodGuess = false;
         }
 
         if(hasWon){
