@@ -47,7 +47,7 @@ public class Game {
         StringBuilder wrongLetters = new StringBuilder();
 
         for (int i = 0; i < randomMovie.length(); i++){
-            if (randomMovie.charAt(i) == ' ' || randomMovie.charAt(i) == '-') {
+            if (!Character.isLetter(randomMovie.charAt(i))) {
                 movieGuess[i] = randomMovie.charAt(i);
             } else {
                 movieGuess[i] = '_';
