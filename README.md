@@ -14,7 +14,7 @@ Clone the GitHub repository.
 
 Go into the src directory
 
-`C:\Users\Example\GuessTheMovie>cd src`
+`C:\Users\Example>cd GuessTheMovie\src`
 
 Compile and run 'GuessTheMovie.java'
 
